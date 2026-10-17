@@ -56,9 +56,8 @@ function createSupabaseClient() {
       ...(!SUPABASE_URL ? ['SUPABASE_URL'] : []),
       ...(!SUPABASE_PUBLISHABLE_KEY ? ['SUPABASE_PUBLISHABLE_KEY'] : []),
     ];
-    const message = `Missing Supabase environment variable(s): ${missing.join(', ')}. Please set SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY in your environment.`;
-    console.error(`[Supabase] ${message}`);
-    throw new Error(message);
+    console.warn(`[Supabase] Missing env var(s): ${missing.join(', ')}. Auth features will be unavailable.`);
+    return null;
   }
 
   return createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
@@ -77,10 +76,10 @@ let _supabase: ReturnType<typeof createSupabaseClient> | undefined;
 
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";
-export const supabase = new Proxy({} as ReturnType<typeof createSupabaseClient>, {
+export const supabase = new Proxy({} as NonNullable<ReturnType<typeof createSupabaseClient>>, {
   get(_, prop, receiver) {
     if (!_supabase) _supabase = createSupabaseClient();
+    if (!_supabase) throw new Error('[Supabase] Client unavailable: SUPABASE_URL / SUPABASE_PUBLISHABLE_KEY are not set.');
     return Reflect.get(_supabase, prop, receiver);
   },
 });
-

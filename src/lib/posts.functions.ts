@@ -3,8 +3,10 @@ import { createClient } from "@supabase/supabase-js";
 import type { Database } from "@/integrations/supabase/types";
 
 function publicClient() {
-  const key = process.env["SUPABASE_PUBLISHABLE_KEY"]!;
-  return createClient<Database>(process.env["SUPABASE_URL"]!, key, {
+  const url = process.env["SUPABASE_URL"];
+  const key = process.env["SUPABASE_PUBLISHABLE_KEY"];
+  if (!url || !key) return null;
+  return createClient<Database>(url, key, {
     auth: { storage: undefined, persistSession: false, autoRefreshToken: false },
     global: {
       fetch: (input, init) => {
@@ -19,6 +21,7 @@ function publicClient() {
   });
 }
 
+
 export type PublicPost = {
   id: string;
   title: string;
@@ -31,7 +34,9 @@ export type PublicPost = {
 };
 
 export const listPosts = createServerFn({ method: "GET" }).handler(async (): Promise<PublicPost[]> => {
-  const { data, error } = await publicClient()
+  const client = publicClient();
+  if (!client) return [];
+  const { data, error } = await client
     .from("posts")
     .select("id,title,slug,excerpt,content,cover_url,author_name,created_at")
     .eq("published", true)
@@ -46,7 +51,9 @@ export const listPosts = createServerFn({ method: "GET" }).handler(async (): Pro
 export const getPost = createServerFn({ method: "GET" })
   .validator((d: { slug: string }) => d)
   .handler(async ({ data }): Promise<PublicPost | null> => {
-    const { data: post, error } = await publicClient()
+    const client = publicClient();
+    if (!client) return null;
+    const { data: post, error } = await client
       .from("posts")
       .select("id,title,slug,excerpt,content,cover_url,author_name,created_at")
       .eq("published", true)
