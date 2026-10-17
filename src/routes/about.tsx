@@ -14,7 +14,7 @@ import {
   Image as ImageIcon,
 } from "lucide-react";
 import { PageHero } from "@/components/site-chrome";
-import consultingImg from "@/assets/consulting.jpg";
+const consultingImg = "/images/consulting.jpg";
 import { whyUs, contact } from "@/lib/site";
 
 export const Route = createFileRoute("/about")({

@@ -19,8 +19,8 @@ import {
   FileCheck2,
   Plane,
 } from "lucide-react";
-import graduatesImg from "@/assets/graduates.jpg";
-import consultingImg from "@/assets/consulting.jpg";
+const graduatesImg = "/images/graduates.jpg";
+const consultingImg = "/images/consulting.jpg";
 import { stats, testimonials, whyUs, faqs, contact } from "@/lib/site";
 import { listPosts } from "@/lib/posts.functions";
 
