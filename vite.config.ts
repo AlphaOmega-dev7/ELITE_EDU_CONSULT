@@ -28,7 +28,13 @@ export default defineConfig(async ({ command }) => {
 
   if (command === "build") {
     const { nitro } = await import("nitro/vite");
-    const nitroOptions: Record<string, unknown> = {};
+    const nitroOptions: Record<string, unknown> = {
+      // Inline packages that are not available as bare specifiers in
+      // serverless Lambda environments (e.g. Vercel Node runtime).
+      externals: {
+        inline: ["tslib"],
+      },
+    };
     if (process.env.VERCEL) {
       nitroOptions.preset = "vercel";
     } else if (!process.env.NITRO_PRESET) {

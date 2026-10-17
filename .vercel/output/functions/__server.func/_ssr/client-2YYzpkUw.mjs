@@ -1,5 +1,5 @@
 import { t as createClient } from "../_libs/supabase__supabase-js.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/client-CC6RYlrr.js
+//#region node_modules/.nitro/vite/services/ssr/assets/client-2YYzpkUw.js
 function isNewSupabaseApiKey(value) {
 	return value.startsWith("sb_publishable_") || value.startsWith("sb_secret_");
 }
@@ -70,9 +70,9 @@ function createSupabaseClient() {
 		"VITE_SUPABASE_URL": "https://kvwdazuujvipzxuugzuj.supabase.co"
 	}["VITE_SUPABASE_PUBLISHABLE_KEY"] || process.env["SUPABASE_PUBLISHABLE_KEY"];
 	if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
-		const message = `Missing Supabase environment variable(s): ${[...!SUPABASE_URL ? ["SUPABASE_URL"] : [], ...!SUPABASE_PUBLISHABLE_KEY ? ["SUPABASE_PUBLISHABLE_KEY"] : []].join(", ")}. Please set SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY in your environment.`;
-		console.error(`[Supabase] ${message}`);
-		throw new Error(message);
+		const missing = [...!SUPABASE_URL ? ["SUPABASE_URL"] : [], ...!SUPABASE_PUBLISHABLE_KEY ? ["SUPABASE_PUBLISHABLE_KEY"] : []];
+		console.warn(`[Supabase] Missing env var(s): ${missing.join(", ")}. Auth features will be unavailable.`);
+		return null;
 	}
 	return createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
 		global: { fetch: createSupabaseFetch(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY) },
@@ -86,6 +86,7 @@ function createSupabaseClient() {
 var _supabase;
 var supabase = new Proxy({}, { get(_, prop, receiver) {
 	if (!_supabase) _supabase = createSupabaseClient();
+	if (!_supabase) throw new Error("[Supabase] Client unavailable: SUPABASE_URL / SUPABASE_PUBLISHABLE_KEY are not set.");
 	return Reflect.get(_supabase, prop, receiver);
 } });
 //#endregion

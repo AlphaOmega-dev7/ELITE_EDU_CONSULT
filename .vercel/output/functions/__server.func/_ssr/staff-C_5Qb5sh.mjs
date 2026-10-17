@@ -4,10 +4,10 @@ import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].
 import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react.mjs";
 import { n as toast } from "../_libs/sonner.mjs";
 import { i as useQueryClient } from "../_libs/tanstack__react-query.mjs";
-import { t as supabase } from "./client-CC6RYlrr.mjs";
+import { t as supabase } from "./client-2YYzpkUw.mjs";
 import { i as cn, n as Input, r as Label, t as Button } from "./label-Cq5SXjoZ.mjs";
 import { n as SwitchThumb, t as Switch$1 } from "../_libs/@radix-ui/react-switch+[...].mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/staff-0xOqQ0IR.js
+//#region node_modules/.nitro/vite/services/ssr/assets/staff-C_5Qb5sh.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var Textarea = import_react.forwardRef(({ className, ...props }, ref) => {

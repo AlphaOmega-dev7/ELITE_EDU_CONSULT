@@ -2,13 +2,13 @@ import { _ as createFileRoute, d as Scripts, f as HeadContent, g as lazyRouteCom
 import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react.mjs";
 import { n as SiteFooter, r as SiteHeader } from "./site-chrome-Dt4zF2mG.mjs";
 import { t as Route$8 } from "./about-BRA-ENdI.mjs";
-import { t as Route$9 } from "./blog._slug-DT_fi_Us.mjs";
+import { t as Route$9 } from "./blog._slug-AxvDtygz.mjs";
 import { t as Toaster } from "../_libs/sonner.mjs";
 import { r as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-import { t as postsQuery } from "./blog.index-CdBC2ojf.mjs";
-import { t as postsQuery$1 } from "./routes-Cob9rKNV.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-5Y9ADNiR.js
+import { t as postsQuery } from "./blog.index-Cyg_tF3d.mjs";
+import { t as postsQuery$1 } from "./routes-CKG0GETK.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/router-CoDPs2fw.js
 var import_jsx_runtime = require_jsx_runtime();
 var styles_default = "/assets/styles--zLEow5v.css";
 var Toaster$1 = ({ ...props }) => {
@@ -163,7 +163,7 @@ function RootComponent() {
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Toaster$1, {})]
 	});
 }
-var $$splitComponentImporter$6 = () => import("./routes-C850LDo6.mjs");
+var $$splitComponentImporter$6 = () => import("./routes-CIuK7QD2.mjs");
 var Route$6 = createFileRoute("/")({
 	head: () => ({ meta: [
 		{ title: "Elite Edu Consult — Premier Admissions & Educational Consultancy" },
@@ -202,7 +202,7 @@ var Route$5 = createFileRoute("/contact")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
-var $$splitComponentImporter$4 = () => import("./reset-password-ziekseWj.mjs");
+var $$splitComponentImporter$4 = () => import("./reset-password-DGW7O6CF.mjs");
 var Route$4 = createFileRoute("/reset-password")({
 	ssr: false,
 	head: () => ({ meta: [
@@ -245,7 +245,7 @@ var Route$3 = createFileRoute("/services")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-var $$splitComponentImporter$2 = () => import("./staff-0xOqQ0IR.mjs");
+var $$splitComponentImporter$2 = () => import("./staff-C_5Qb5sh.mjs");
 var Route$2 = createFileRoute("/staff")({
 	ssr: false,
 	head: () => ({ meta: [
@@ -288,7 +288,7 @@ var Route$1 = createFileRoute("/testimonials")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-var $$splitComponentImporter = () => import("./blog.index-AED2w8Pr.mjs");
+var $$splitComponentImporter = () => import("./blog.index-VZjJoL-W.mjs");
 var Route = createFileRoute("/blog/")({
 	head: () => ({ meta: [
 		{ title: "Daily Blog & Admissions Insights — Elite Edu Consult" },

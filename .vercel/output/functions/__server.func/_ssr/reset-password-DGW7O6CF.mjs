@@ -3,9 +3,9 @@ import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].
 import { b as useNavigate } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react.mjs";
 import { n as toast } from "../_libs/sonner.mjs";
-import { t as supabase } from "./client-CC6RYlrr.mjs";
+import { t as supabase } from "./client-2YYzpkUw.mjs";
 import { n as Input, r as Label, t as Button } from "./label-Cq5SXjoZ.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/reset-password-ziekseWj.js
+//#region node_modules/.nitro/vite/services/ssr/assets/reset-password-DGW7O6CF.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function Reset() {

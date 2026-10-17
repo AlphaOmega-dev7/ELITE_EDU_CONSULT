@@ -5,8 +5,8 @@ import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react
 import { A as ArrowRight, O as BookOpenCheck, u as Search } from "../_libs/lucide-react.mjs";
 import { t as PageHero } from "./site-chrome-Dt4zF2mG.mjs";
 import { n as useSuspenseQuery } from "../_libs/tanstack__react-query.mjs";
-import { t as postsQuery } from "./blog.index-CdBC2ojf.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/blog.index-AED2w8Pr.js
+import { t as postsQuery } from "./blog.index-Cyg_tF3d.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/blog.index-VZjJoL-W.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function Blog() {

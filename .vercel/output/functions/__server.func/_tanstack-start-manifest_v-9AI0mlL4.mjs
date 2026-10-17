@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-ChPdcZKY.js
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-9AI0mlL4.js
 var tsrStartManifest = () => ({ routes: {
 	__root__: {
 		filePath: "C:/Users/Oteng/OneDrive/Desktop/Hobby/ELITE_EDU_CONSULT/src/routes/__root.tsx",
@@ -14,7 +14,7 @@ var tsrStartManifest = () => ({ routes: {
 			"/blog/"
 		],
 		preloads: [
-			"/assets/index-tGxifvjv.js",
+			"/assets/index-DyCyVuzq.js",
 			"/assets/jsx-runtime-ByaQ0wya.js",
 			"/assets/posts.functions-DbjsbKFM.js",
 			"/assets/invariant-CgFvOqN2.js",
@@ -27,15 +27,15 @@ var tsrStartManifest = () => ({ routes: {
 		scripts: [{ attrs: {
 			type: "module",
 			async: !0,
-			src: "/assets/index-tGxifvjv.js"
+			src: "/assets/index-DyCyVuzq.js"
 		} }]
 	},
 	"/": {
 		filePath: "C:/Users/Oteng/OneDrive/Desktop/Hobby/ELITE_EDU_CONSULT/src/routes/index.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/routes-JnT193F_.js",
-			"/assets/useSuspenseQuery-CU2AYagY.js",
+			"/assets/routes-Bam1yTNL.js",
+			"/assets/useSuspenseQuery-CxYeOx22.js",
 			"/assets/book-open-check-BUDZqo8K.js",
 			"/assets/circle-check-CBP7j_Dy.js",
 			"/assets/school-BU30lmP5.js",
@@ -46,13 +46,13 @@ var tsrStartManifest = () => ({ routes: {
 	"/about": {
 		filePath: "C:/Users/Oteng/OneDrive/Desktop/Hobby/ELITE_EDU_CONSULT/src/routes/about.tsx",
 		children: void 0,
-		preloads: ["/assets/about-DOMFQ-zr.js"]
+		preloads: ["/assets/about-h23lkUK6.js"]
 	},
 	"/contact": {
 		filePath: "C:/Users/Oteng/OneDrive/Desktop/Hobby/ELITE_EDU_CONSULT/src/routes/contact.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/contact-CLDsQITB.js",
+			"/assets/contact-CJkPwWWv.js",
 			"/assets/calendar-00qRX4eB.js",
 			"/assets/circle-check-CBP7j_Dy.js",
 			"/assets/send-DGZLLXBC.js",
@@ -63,16 +63,16 @@ var tsrStartManifest = () => ({ routes: {
 		filePath: "C:/Users/Oteng/OneDrive/Desktop/Hobby/ELITE_EDU_CONSULT/src/routes/reset-password.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/reset-password-DdC4Z4l_.js",
+			"/assets/reset-password-BO3MO5h3.js",
 			"/assets/useNavigate-DCaDQQMJ.js",
-			"/assets/label-jvNI7-3b.js"
+			"/assets/label-C4eI9HbC.js"
 		]
 	},
 	"/services": {
 		filePath: "C:/Users/Oteng/OneDrive/Desktop/Hobby/ELITE_EDU_CONSULT/src/routes/services.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/services-BcUOjKFN.js",
+			"/assets/services-Cs7yNZ_X.js",
 			"/assets/book-open-check-BUDZqo8K.js",
 			"/assets/circle-check-CBP7j_Dy.js",
 			"/assets/school-BU30lmP5.js"
@@ -81,13 +81,13 @@ var tsrStartManifest = () => ({ routes: {
 	"/staff": {
 		filePath: "C:/Users/Oteng/OneDrive/Desktop/Hobby/ELITE_EDU_CONSULT/src/routes/staff.tsx",
 		children: void 0,
-		preloads: ["/assets/staff-kNVDl7-O.js", "/assets/label-jvNI7-3b.js"]
+		preloads: ["/assets/staff-mR5O_DTO.js", "/assets/label-C4eI9HbC.js"]
 	},
 	"/testimonials": {
 		filePath: "C:/Users/Oteng/OneDrive/Desktop/Hobby/ELITE_EDU_CONSULT/src/routes/testimonials.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/testimonials-BEHfnwk0.js",
+			"/assets/testimonials-B_qWTcfY.js",
 			"/assets/send-DGZLLXBC.js",
 			"/assets/star-BiLZOvXl.js"
 		]
@@ -96,18 +96,18 @@ var tsrStartManifest = () => ({ routes: {
 		filePath: "C:/Users/Oteng/OneDrive/Desktop/Hobby/ELITE_EDU_CONSULT/src/routes/blog.$slug.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/blog._slug-B91K7PTw.js",
+			"/assets/blog._slug-BthdD8u0.js",
 			"/assets/arrow-left-CinWbC9Q.js",
-			"/assets/blog._slug-CQ4UvqSp.js",
-			"/assets/calendar-00qRX4eB.js"
+			"/assets/calendar-00qRX4eB.js",
+			"/assets/blog._slug-DiXKmigl.js"
 		]
 	},
 	"/blog/": {
 		filePath: "C:/Users/Oteng/OneDrive/Desktop/Hobby/ELITE_EDU_CONSULT/src/routes/blog.index.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/blog.index-BnAV8ZvC.js",
-			"/assets/useSuspenseQuery-CU2AYagY.js",
+			"/assets/blog.index-bzNvI1UU.js",
+			"/assets/useSuspenseQuery-CxYeOx22.js",
 			"/assets/book-open-check-BUDZqo8K.js"
 		]
 	}

@@ -1,6 +1,6 @@
 import { a as TSS_SERVER_FUNCTION, l as createServerFn } from "./createServerFn-DDDJMFWM.mjs";
 import { t as createClient } from "../_libs/supabase__supabase-js.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/posts.functions-t1NraiBN.js
+//#region node_modules/.nitro/vite/services/ssr/assets/posts.functions-Ccmkg6B3.js
 var createServerRpc = (serverFnMeta, splitImportFn) => {
 	const url = "/_serverFn/" + serverFnMeta.id;
 	return Object.assign(splitImportFn, {
@@ -10,8 +10,10 @@ var createServerRpc = (serverFnMeta, splitImportFn) => {
 	});
 };
 function publicClient() {
+	const url = process.env["SUPABASE_URL"];
 	const key = process.env["SUPABASE_PUBLISHABLE_KEY"];
-	return createClient(process.env["SUPABASE_URL"], key, {
+	if (!url || !key) return null;
+	return createClient(url, key, {
 		auth: {
 			storage: void 0,
 			persistSession: false,
@@ -36,7 +38,9 @@ var listPosts_createServerFn_handler = createServerRpc({
 	filename: "src/lib/posts.functions.ts"
 }, (opts) => listPosts.__executeServer(opts));
 var listPosts = createServerFn({ method: "GET" }).handler(listPosts_createServerFn_handler, async () => {
-	const { data, error } = await publicClient().from("posts").select("id,title,slug,excerpt,content,cover_url,author_name,created_at").eq("published", true).order("created_at", { ascending: false });
+	const client = publicClient();
+	if (!client) return [];
+	const { data, error } = await client.from("posts").select("id,title,slug,excerpt,content,cover_url,author_name,created_at").eq("published", true).order("created_at", { ascending: false });
 	if (error) {
 		console.error(error);
 		return [];
@@ -49,7 +53,9 @@ var getPost_createServerFn_handler = createServerRpc({
 	filename: "src/lib/posts.functions.ts"
 }, (opts) => getPost.__executeServer(opts));
 var getPost = createServerFn({ method: "GET" }).validator((d) => d).handler(getPost_createServerFn_handler, async ({ data }) => {
-	const { data: post, error } = await publicClient().from("posts").select("id,title,slug,excerpt,content,cover_url,author_name,created_at").eq("published", true).eq("slug", data.slug).maybeSingle();
+	const client = publicClient();
+	if (!client) return null;
+	const { data: post, error } = await client.from("posts").select("id,title,slug,excerpt,content,cover_url,author_name,created_at").eq("published", true).eq("slug", data.slug).maybeSingle();
 	if (error) console.error(error);
 	return post ?? null;
 });

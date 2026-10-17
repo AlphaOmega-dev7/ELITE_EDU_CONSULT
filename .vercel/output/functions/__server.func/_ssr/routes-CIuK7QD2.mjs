@@ -5,8 +5,8 @@ import { y as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react.mjs";
 import { A as ArrowRight, C as Compass, E as ChevronRight, O as BookOpenCheck, S as Earth, T as CircleCheck, a as Star, b as GraduationCap, d as School, h as MessageCircle, k as Award, o as Sparkles, p as Plane, s as ShieldCheck, x as FileCheckCorner } from "../_libs/lucide-react.mjs";
 import { n as useSuspenseQuery } from "../_libs/tanstack__react-query.mjs";
-import { t as postsQuery } from "./routes-Cob9rKNV.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-C850LDo6.js
+import { t as postsQuery } from "./routes-CKG0GETK.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-CIuK7QD2.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var graduatesImg = "/images/graduates.jpg";
