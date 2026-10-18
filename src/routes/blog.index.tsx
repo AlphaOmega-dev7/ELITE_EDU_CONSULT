@@ -13,7 +13,7 @@ const postsQuery = queryOptions({
 export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
-      { title: "Daily Blog & Admissions Insights — Elite Edu Consult" },
+      { title: "Daily Blog and Admissions Insights — Elite Edu Consult" },
       {
         name: "description",
         content:
@@ -44,7 +44,7 @@ function Blog() {
   return (
     <>
       <PageHero
-        eyebrow="Admissions & Scholarship Guide"
+        eyebrow="Admissions and Scholarship Guide"
         title="Insights for Ambitious Students"
         text="Stay informed with proven application strategies, scholarship deadlines, and test preparation advice from our expert advisory team."
       />

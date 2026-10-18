@@ -12,6 +12,7 @@ import {
   Heart,
   User,
   Image as ImageIcon,
+  Globe,
 } from "lucide-react";
 import { PageHero } from "@/components/site-chrome";
 const consultingImg = "/images/consulting.jpg";
@@ -20,7 +21,7 @@ import { whyUs, contact } from "@/lib/site";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us & Our Team — Elite Edu Consult" },
+      { title: "About Us and Our Team — Elite Edu Consult" },
       {
         name: "description",
         content:
@@ -73,32 +74,32 @@ const milestones = [
   },
   {
     year: "2021",
-    title: "Digital SAT & NSMQ Science Clinics",
+    title: "Digital SAT and NSMQ Science Clinics",
     text: "Inaugurated state-of-the-art preparatory masterclasses resulting in multiple 1450+ SAT scores and NSMQ champions.",
   },
   {
     year: "2025+",
-    title: "$2.8M+ in Student Scholarships",
+    title: "2.8M+ in Student Scholarships",
     text: "Celebrated placing over 850 students with millions of dollars in financial aid, merit awards, and research assistantships.",
   },
 ];
 
 export const teamMembers = [
   {
-    name: "PATRICK K SOSU",
+    name: "PATRICK K. SOSU",
     role: "FOUNDER",
     initials: "PKS",
     bio: "Welcome — I'm Patrick K. Sosu, Founder of Elite EduConsult. Elite EduConsult was built from a deep passion for guiding students through successful applications and helping them secure admission into their desired programs abroad. I find genuine fulfillment in seeing students take the next step toward their academic goals, and every admission offer feels like a shared victory.\n\nHobbies: Video games, music, movies\nFun Fact: I believe good counseling, quality education, and honest advice can solve almost anything except hunger.",
   },
   {
     name: "KIRAKOE ABDULRAHIM HALIDU",
-    role: "CO-FOUNDER & ADVISOR MANAGER",
+    role: "CO-FOUNDER and ADVISOR MANAGER",
     initials: "KAH",
     bio: "Co-Founder of Elite Edu Consult and a trained physician. I am passionate about helping individuals from underprivileged backgrounds achieve their academic and career goals through guidance and counseling.\n\nHobbies: research, skating, and riding.\nFun fact: I believe education can heal and transform lives just as powerfully as medicine.",
   },
   {
     name: "JULIUS KPEBU",
-    role: "CO-FOUNDER & OPERATION MANAGER",
+    role: "CO-FOUNDER  and OPERATION MANAGER",
     initials: "JK",
     bio: "I am currently pursuing a Doctor of Pharmacy degree at the University of Ghana. I love to make life easy for others and to see them win.\n\nHobbies: Research, writing, movies.",
   },
@@ -110,7 +111,7 @@ export const teamMembers = [
   },
   {
     name: "SARAH EYRAM AGBEVADE",
-    role: "MARKETING & CUSTOMER RELATIONS MANAGER",
+    role: "MARKETING and CUSTOMER RELATIONS MANAGER",
     initials: "SEA",
     bio: "Dedicated to student advocacy, relationship building, and strategic communication. I ensure every prospective student and family receives tailored, empathetic guidance and prompt support throughout their admission journey.\n\nHobbies: Creative strategy, event coordination, and reading.\nFun fact: Connecting people with life-changing educational opportunities is my greatest passion.",
   },
@@ -120,7 +121,7 @@ function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="Our Story & Leadership"
+        eyebrow="Our Story and Leadership"
         title="Dedicated to Your Academic Future"
         text="Founded on Legon Campus, Elite Edu Consult is led by passionate educators, physicians, and academic advisors bridging ambitious African learners with premier higher education worldwide."
       />
@@ -130,7 +131,7 @@ function AboutPage() {
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center max-w-3xl mx-auto">
             <span className="rounded-full bg-gold/15 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-amber-800">
-              Leadership & Consultants
+              Leadership and Consultants
             </span>
             <h2 className="mt-3 font-display text-3xl font-extrabold text-primary sm:text-4xl md:text-5xl">
               Meet Our Team
@@ -162,7 +163,7 @@ function AboutPage() {
                     </span>
                   </div>
 
-                  {/* Name & Function */}
+                  {/* Name and Function */}
                   <div className="mt-6">
                     <h3 className="font-display text-xl sm:text-2xl font-extrabold text-navy tracking-tight leading-snug group-hover:text-amber-800 transition-colors">
                       {member.name}
@@ -193,29 +194,62 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* MISSION & VISION */}
+      {/* MISSION, VISION and OPERATIONS */}
       <section className="mx-auto max-w-7xl px-4 py-20">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <span className="rounded-full bg-gold/15 px-4 py-1 text-xs font-bold uppercase tracking-widest text-amber-800">
-              Our Vision
-            </span>
-            <h2 className="mt-3 font-display text-3xl font-extrabold text-primary sm:text-4xl">
-              Unlocking Access to World-Class Education for Every Deserving Student
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              At Elite Edu Consult, we believe that talent and dedication should never be limited by lack of guidance or information. Navigating higher education admissions can be overwhelming — whether deciphering university cut-off points in Ghana or navigating competitive US scholarship pools.
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              Our seasoned consultants provide the roadmap, coaching, and advocacy needed to turn ambition into acceptance letters.
-            </p>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="rounded-full bg-gold/15 px-4 py-1 text-xs font-bold uppercase tracking-widest text-amber-800">
+                Our Vision and Mission
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-700 border border-emerald-500/20">
+                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                Virtual Office
+              </span>
+            </div>
 
-            <div className="mt-8 rounded-2xl border-l-4 border-gold bg-secondary/80 p-6">
-              <h3 className="font-display text-xl font-bold text-primary">
-                Our Core Mission
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-foreground/90">
-                To empower students at every stage of their academic journey through ethical advice, personalized mentoring, admissions strategy, scholarship placement, test preparation, and career development.
+            <h2 className="mt-4 font-display text-3xl font-extrabold text-primary sm:text-4xl">
+              Organization's Vision
+            </h2>
+
+            <div className="mt-6 space-y-4">
+              <div className="flex items-start gap-3.5 rounded-2xl border border-border/80 bg-card p-5 shadow-sm transition-all hover:border-gold/50">
+                <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold/20 text-amber-800 font-bold text-xs">
+                  ●
+                </div>
+                <p className="text-base leading-relaxed text-foreground/90">
+                  <strong className="text-primary font-semibold">Elite Edu Consult</strong> exists to connect students and young professionals with suitable educational and international opportunities through responsible guidance, application support, academic preparation, and strategic partnerships.
+                </p>
+              </div>
+
+              <div className="flex items-start gap-3.5 rounded-2xl border border-border/80 bg-card p-5 shadow-sm transition-all hover:border-gold/50">
+                <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold/20 text-amber-800 font-bold text-xs">
+                  ●
+                </div>
+                <p className="text-base leading-relaxed text-foreground/90">
+                  <strong className="text-primary font-semibold">Elite</strong> helps students identify opportunities that genuinely fit their academic background, financial situation, career goals, and long-term plans.
+                </p>
+              </div>
+            </div>
+
+            {/* Mode of Operation Notice */}
+            <div className="mt-6 rounded-2xl border-2 border-gold/40 bg-gradient-to-br from-secondary/90 via-secondary/60 to-gold/10 p-6 shadow-sm">
+              <div className="flex items-center gap-2.5">
+                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gold/20 text-amber-800">
+                  <Globe className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="font-display text-base sm:text-lg font-bold text-primary">
+                    Mode of Operation: Remote
+                  </h3>
+                  <p className="text-xs text-muted-foreground">Virtual Office Coordination</p>
+                </div>
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-foreground/90 font-medium">
+                The Elite Edu Consult team communicates and coordinates as a virtual office, until a physical office is established.
+              </p>
+              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                We deliver tailored one-on-one consultations, application processing, essay reviews, and mentorship remotely to students and young professionals wherever they are.
               </p>
             </div>
           </div>
@@ -231,12 +265,12 @@ function AboutPage() {
             </div>
             <div className="absolute -bottom-5 -left-5 rounded-xl border border-gold/40 bg-navy p-5 text-white shadow-xl hidden sm:block">
               <p className="text-xs font-bold text-gold uppercase tracking-wider">
-                Headquarters
+                Mode of Operation
               </p>
               <p className="font-display text-base font-bold text-white mt-0.5">
-                Legon Campus, Accra
+                Remote and Virtual Office
               </p>
-              <p className="text-xs text-white/70">University of Ghana</p>
+              <p className="text-xs text-white/70">Coordinating Worldwide</p>
             </div>
           </div>
         </div>
@@ -317,7 +351,7 @@ function AboutPage() {
             Ready to Plan Your Next Step?
           </h2>
           <p className="mt-3 text-sm text-white/80">
-            Book an in-person appointment at our Legon Campus office or join us virtually from anywhere in the world.
+            Connect with our team through our virtual office or schedule a 1-on-1 consultation from anywhere in Ghana and worldwide.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link

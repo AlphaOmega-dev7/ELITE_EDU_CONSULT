@@ -8,6 +8,7 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
+    "staff:provision": "node scripts/provision-test-user.cjs",
     "lint": "eslint .",
     "format": "prettier --write .",
     "test": "vitest run",

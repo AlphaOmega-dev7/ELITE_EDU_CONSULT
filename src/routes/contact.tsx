@@ -18,7 +18,7 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Us & Book Consultation — Elite Edu Consult" },
+      { title: "Contact Us and Book Consultation — Elite Edu Consult" },
       {
         name: "description",
         content:
@@ -38,12 +38,12 @@ export const Route = createFileRoute("/contact")({
 const serviceOptions = [
   "Study Abroad Admissions (USA, UK, Canada, Europe)",
   "Ghana University Applications (UG, KNUST, UCC)",
-  "Scholarship Placement & Essay Assistance",
-  "Digital SAT Preparation & Coaching",
-  "NSMQ Training & Science Classes",
+  "Scholarship Placement and Essay Assistance",
+  "Digital SAT Preparation and Coaching",
+  "NSMQ Training and Science Classes",
   "WASSCE / Nov-Dec Remedial Classes",
-  "Student Visa Processing & Mock Interviews",
-  "Career Counselling & Profiling",
+  "Student Visa Processing and Mock Interviews",
+  "Career Counselling and Profiling",
 ];
 
 function ContactPage() {
@@ -51,9 +51,9 @@ function ContactPage() {
     name: "",
     email: "",
     phone: "",
-    service: serviceOptions[0],
-    level: "High School Graduate (WASSCE)",
-    destination: "United States / Canada",
+    service: "",
+    level: "",
+    destination: "",
     notes: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -64,18 +64,24 @@ function ContactPage() {
       toast.error("Please provide your name and phone/WhatsApp number.");
       return;
     }
+    if (!formData.service) {
+      toast.error("Please select a service of interest.");
+      return;
+    }
     setIsSubmitted(true);
     toast.success("Consultation request received! Our team will reach out within 24 hours.");
   };
 
   const whatsappInquiryUrl = `https://wa.me/233540720749?text=${encodeURIComponent(
-    `Hello Elite Edu Consult, my name is ${formData.name || "a prospective student"}. I am interested in ${formData.service}. Could we schedule a consultation?`
+    `Hello Elite Edu Consult, my name is ${formData.name || "a prospective student"}.${
+      formData.service ? ` I am interested in ${formData.service}.` : ""
+    } Could we schedule a consultation?`
   )}`;
 
   return (
     <>
       <PageHero
-        eyebrow="Consultation & Inquiries"
+        eyebrow="Consultation and Inquiries"
         title="Let's Plan Your Academic Future"
         text="Visit our office at Legon Campus, Accra, or book a free 1-on-1 virtual consultation with our accredited educational advisors."
       />
@@ -176,12 +182,16 @@ function ContactPage() {
                       Service of Interest *
                     </label>
                     <select
+                      required
                       value={formData.service}
                       onChange={(e) =>
                         setFormData({ ...formData, service: e.target.value })
                       }
                       className="mt-1.5 w-full rounded-lg border border-input bg-background px-4 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-gold"
                     >
+                      <option value="" disabled>
+                        Select a service of interest...
+                      </option>
                       {serviceOptions.map((s) => (
                         <option key={s} value={s}>
                           {s}
@@ -202,6 +212,9 @@ function ContactPage() {
                         }
                         className="mt-1.5 w-full rounded-lg border border-input bg-background px-4 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-gold"
                       >
+                        <option value="">
+                          Select current education level...
+                        </option>
                         <option value="High School Student (Form 2 / Form 3)">
                           High School Student (SHS 2 / SHS 3)
                         </option>
@@ -291,7 +304,7 @@ function ContactPage() {
             {/* Office Information Cards */}
             <div className="rounded-2xl border border-border bg-card p-7 shadow-xs space-y-6">
               <h3 className="font-display text-lg font-bold text-primary">
-                Contact & Office Details
+                Contact and Office Details
               </h3>
 
               <div className="flex items-start gap-3.5 text-sm">
@@ -300,7 +313,7 @@ function ContactPage() {
                   <p className="font-bold text-foreground">Legon Campus Office</p>
                   <p className="text-muted-foreground">{contact.address}</p>
                   <p className="text-xs text-gold font-medium mt-0.5">
-                    Close to main student hubs & transportation
+                    Close to main student hubs and transportation
                   </p>
                 </div>
               </div>

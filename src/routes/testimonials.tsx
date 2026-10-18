@@ -18,7 +18,7 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/testimonials")({
   head: () => ({
     meta: [
-      { title: "Student Success Stories & Testimonials — Elite Edu Consult" },
+      { title: "Student Success Stories and Testimonials — Elite Edu Consult" },
       {
         name: "description",
         content:
@@ -39,7 +39,7 @@ const categories = [
   "All Stories",
   "Study Abroad",
   "Ghana Universities",
-  "Test Prep & SAT",
+  "Test Prep and SAT",
   "Visa Guidance",
   "Scholarships",
 ];
@@ -86,11 +86,10 @@ function TestimonialsPage() {
               key={c}
               type="button"
               onClick={() => setActiveCategory(c)}
-              className={`rounded-full px-5 py-2 text-xs font-bold transition-all ${
-                activeCategory === c
-                  ? "bg-primary text-primary-foreground shadow-md scale-105"
-                  : "bg-secondary text-foreground hover:bg-secondary/80"
-              }`}
+              className={`rounded-full px-5 py-2 text-xs font-bold transition-all ${activeCategory === c
+                ? "bg-primary text-primary-foreground shadow-md scale-105"
+                : "bg-secondary text-foreground hover:bg-secondary/80"
+                }`}
             >
               {c}
             </button>

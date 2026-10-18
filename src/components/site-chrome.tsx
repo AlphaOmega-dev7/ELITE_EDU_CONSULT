@@ -67,7 +67,7 @@ export function Logo() {
           Elite Edu Consult
         </span>
         <span className="block text-[10px] font-semibold uppercase tracking-widest text-gold/90">
-          Academic & Global Admissions
+          Academic and Global Admissions
         </span>
       </div>
     </Link>
@@ -209,7 +209,7 @@ export function SiteFooter() {
           </p>
           <div className="flex items-center gap-2 text-xs font-semibold text-gold">
             <ShieldCheck className="h-4 w-4" />
-            <span>Accredited Advisory & Certified Mentorship</span>
+            <span>Accredited Advisory and Certified Mentorship</span>
           </div>
         </div>
 
@@ -218,10 +218,10 @@ export function SiteFooter() {
           <h4 className="font-display text-base font-semibold text-gold">Our Core Services</h4>
           <ul className="mt-4 space-y-2.5 text-sm text-white/75">
             <li><Link to="/services" className="hover:text-gold transition-colors">Study Abroad Admissions</Link></li>
-            <li><Link to="/services" className="hover:text-gold transition-colors">Scholarship Placement & Essays</Link></li>
-            <li><Link to="/services" className="hover:text-gold transition-colors">Ghana Universities & Colleges</Link></li>
-            <li><Link to="/services" className="hover:text-gold transition-colors">SAT & Test Preparation</Link></li>
-            <li><Link to="/services" className="hover:text-gold transition-colors">NSMQ & WASSCE Masterclasses</Link></li>
+            <li><Link to="/services" className="hover:text-gold transition-colors">Scholarship Placement and Essays</Link></li>
+            <li><Link to="/services" className="hover:text-gold transition-colors">Ghana Universities and Colleges</Link></li>
+            <li><Link to="/services" className="hover:text-gold transition-colors">SAT and Test Preparation</Link></li>
+            <li><Link to="/services" className="hover:text-gold transition-colors">NSMQ and WASSCE Masterclasses</Link></li>
             <li><Link to="/services" className="hover:text-gold transition-colors">Student Visa Advisory</Link></li>
           </ul>
         </div>
@@ -239,7 +239,7 @@ export function SiteFooter() {
             ))}
             <li>
               <Link to="/staff" className="text-xs text-white/50 hover:text-gold transition-colors">
-                Staff & Admin Portal
+                Staff and Admin Portal
               </Link>
             </li>
           </ul>

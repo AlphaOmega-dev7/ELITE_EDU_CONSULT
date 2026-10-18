@@ -28,37 +28,37 @@ export const international: Service[] = [
     id: "study-abroad",
     title: "Study Abroad Admissions",
     text: "Complete end-to-end assistance with university applications across USA, Canada, UK, Europe, Australia, and Asia. We help you pick matched institutions, polish SOP essays, and ace deadlines.",
-    highlights: ["University shortlist tailored to budget", "Personal statement & CV editing", "Document certification & courier tracking", "Acceptance follow-ups"]
+    highlights: ["University shortlist tailored to budget", "Personal statement and CV editing", "Document certification and courier tracking", "Acceptance follow-ups"]
   },
   {
     id: "scholarships",
     title: "Scholarship Placement",
     text: "Maximize your chances of institutional aid, merit awards, and external fellowships. Our consultants have helped students unlock over $2.8 million in university funding.",
-    highlights: ["Merit & need-based scholarship matching", "High-impact essay drafting & reviews", "Financial declaration advisory", "Funding interview coaching"]
+    highlights: ["Merit and need-based scholarship matching", "High-impact essay drafting and reviews", "Financial declaration advisory", "Funding interview coaching"]
   },
   {
     id: "visa-guidance",
     title: "Visa Processing Guidance",
     text: "Rigorous preparation for embassy interviews and visa filing. We guide your documentation, bank statements, proof of ties, and run realistic mock embassy interviews.",
-    highlights: ["F-1, UK Tier 4 & Canadian Study Permit checklists", "Financial proof of funds verification", "1-on-1 mock embassy interviews", "Post-visa travel & briefing"]
+    highlights: ["F-1, UK Tier 4 and Canadian Study Permit checklists", "Financial proof of funds verification", "1-on-1 mock embassy interviews", "Post-visa travel and briefing"]
   },
   {
     id: "sat-prep",
-    title: "SAT Preparation & Coaching",
+    title: "SAT Preparation and Coaching",
     text: "Our premier Digital SAT preparatory curriculum featuring master tutors, proven mathematical shortcuts, vocabulary drills, and real full-length computer-adaptive practice tests.",
-    highlights: ["Diagnostic baseline evaluation", "Target score strategy (1400+ focus)", "Weekly adaptive mock tests", "Small group & private sessions"]
+    highlights: ["Diagnostic baseline evaluation", "Target score strategy (1400+ focus)", "Weekly adaptive mock tests", "Small group and private sessions"]
   },
   {
     id: "career-counselling",
-    title: "Career Counselling & Profiling",
+    title: "Career Counselling and Profiling",
     text: "Discover lucrative, future-proof career paths matched to your natural aptitude, strengths, and academic background through psychometric assessments and industry insights.",
-    highlights: ["Comprehensive career aptitude testing", "Undergraduate & postgraduate roadmap", "Emerging global industries overview", "Curriculum alignment"]
+    highlights: ["Comprehensive career aptitude testing", "Undergraduate and postgraduate roadmap", "Emerging global industries overview", "Curriculum alignment"]
   },
   {
     id: "student-mentoring",
-    title: "Student Mentoring & Support",
+    title: "Student Mentoring and Support",
     text: "Continuous 1-on-1 mentorship during your academic journey. Our advisors keep students motivated, focused, organized, and culturally prepared for life abroad.",
-    highlights: ["Goal tracking & study habits", "Cross-cultural adaptation prep", "Internship & CV enhancement", "Emergency academic support"]
+    highlights: ["Goal tracking and study habits", "Cross-cultural adaptation prep", "Internship and CV enhancement", "Emergency academic support"]
   },
 ];
 
@@ -67,7 +67,7 @@ export const local: Service[] = [
     id: "ghana-unis",
     title: "All Ghana Universities Applications",
     text: "Comprehensive application guidance for public and private institutions across Ghana: UG Legon, KNUST, UCC, UPSA, UENR, Ashesi, and Academic City.",
-    highlights: ["Cut-off points analysis & strategy", "Programme selection optimization", "Application voucher purchase assistance", "Follow-up until matriculation"]
+    highlights: ["Cut-off points analysis and strategy", "Programme selection optimization", "Application voucher purchase assistance", "Follow-up until matriculation"]
   },
   {
     id: "colleges-of-education",
@@ -83,9 +83,9 @@ export const local: Service[] = [
   },
   {
     id: "halls-hostels",
-    title: "Halls & Hostels Consultation",
+    title: "Halls and Hostels Consultation",
     text: "Secure comfortable, safe, and accessible campus accommodation. We help students navigate high-demand hostel portals and private off-campus housing near Legon and KNUST.",
-    highlights: ["Hostel portal booking alerts", "Budget & safety comparisons", "Early reservation assistance"]
+    highlights: ["Hostel portal booking alerts", "Budget and safety comparisons", "Early reservation assistance"]
   },
   {
     id: "course-consultation",
@@ -95,9 +95,9 @@ export const local: Service[] = [
   },
   {
     id: "student-jobs",
-    title: "Student Internships & Work-Study",
+    title: "Student Internships and Work-Study",
     text: "Guidance on balancing academics with part-time work, crafting student resumes, finding campus work-study opportunities, and preparing for professional interviews.",
-    highlights: ["Student resume & LinkedIn makeover", "Work-study balance strategies", "Interview preparation"]
+    highlights: ["Student resume and LinkedIn makeover", "Work-study balance strategies", "Interview preparation"]
   },
 ];
 
@@ -106,33 +106,44 @@ export const testPrep: Service[] = [
     id: "sat-bootcamp",
     title: "Digital SAT Preparation Masterclass",
     text: "State-of-the-art preparation for the Digital SAT exam. Taught by top scorers with comprehensive coverage of Reading, Writing, and Advanced Math modules.",
-    highlights: ["1400+ Target score strategies", "Digital Bluebook platform simulations", "Comprehensive formula & grammar rules"]
+    highlights: ["1400+ Target score strategies", "Digital Bluebook platform simulations", "Comprehensive formula and grammar rules"]
   },
   {
     id: "nsmq-training",
-    title: "NSMQ Training & Science Clinics",
-    text: "Advanced training for high school students preparing for the National Science & Maths Quiz. Intensive speed drills, conceptual mastery, and buzzer strategies.",
+    title: "NSMQ Training and Science Clinics",
+    text: "Advanced training for high school students preparing for the National Science and Maths Quiz. Intensive speed drills, conceptual mastery, and buzzer strategies.",
     highlights: ["Buzzer speed and quick calculation drills", "Rounds 1–5 mock contests", "Past question analysis with science masters"]
   },
   {
     id: "wassce-classes",
-    title: "WASSCE & Nov-Dec Remedial Classes",
+    title: "WASSCE and Nov-Dec Remedial Classes",
     text: "Master syllabus content with certified West African Examinations Council subject examiners. Focused revision, past question solutions, and examination psychology.",
-    highlights: ["Elective & Core subjects covered", "Examiner tips for grade A1", "Small class sizes & individualized tracking"]
+    highlights: ["Elective and Core subjects covered", "Examiner tips for grade A1", "Small class sizes and individualized tracking"]
   },
   {
     id: "vocational-classes",
-    title: "Vocational & Practical Skills Training",
+    title: "Vocational and Practical Skills Training",
     text: "Hands-on vocational programmes equipping young school leavers with practical, entrepreneurial, and technical skills for immediate self-reliance.",
     highlights: ["Practical workshop sessions", "Business starter kits", "Certification and mentorship"]
   },
 ];
 
+export const modeOfOperation = {
+  type: "Remote",
+  notice: "Mode of Operation: Remote (the Elite Edu Consult team communicates and coordinates as a virtual office, until a physical office is established).",
+  description: "The Elite Edu Consult team communicates and coordinates as a virtual office, until a physical office is established.",
+};
+
+export const organizationVision = [
+  "Elite Edu Consult exists to connect students and young professionals with suitable educational and international opportunities through responsible guidance, application support, academic preparation, and strategic partnerships.",
+  "Elite helps students identify opportunities that genuinely fit their academic background, financial situation, career goals, and long-term plans.",
+];
+
 export const whyUs = [
   "Over a decade of trusted educational consultancy",
-  "98.4% visa approval record across UK, US, & Canada",
+  "98.4% visa approval record across UK, US, and Canada",
   "More than $2.8M in student scholarships secured",
-  "Direct campus office conveniently located at Legon",
+  "Seamless virtual office advisory accessible from anywhere",
   "Personalized 1-on-1 guidance tailored to every student's budget",
   "Certified instructors for SAT, NSMQ, and WASSCE",
   "End-to-end support: from first consultation to flight departure",
@@ -140,8 +151,8 @@ export const whyUs = [
 ];
 
 export const stats = [
-  { value: "98.4%", label: "Visa Success Rate", sub: "US, UK, Canada & Europe" },
-  { value: "$2.8M+", label: "Scholarships Secured", sub: "For Ghanaian & international students" },
+  { value: "98.4%", label: "Visa Success Rate", sub: "US, UK, Canada and Europe" },
+  { value: "$2.8M+", label: "Scholarships Secured", sub: "For Ghanaian and international students" },
   { value: "850+", label: "Students Placed", sub: "In prestigious universities" },
   { value: "100%", label: "Personalized Support", sub: "Dedicated 1-on-1 educational advisors" },
 ];
@@ -161,7 +172,7 @@ export const testimonials = [
     id: "2",
     name: "Abena Osei-Bonsu",
     institution: "University of Ghana Medical School",
-    program: "MB ChB Medicine & Surgery",
+    program: "MB ChB Medicine and Surgery",
     award: "Direct Entry Admission",
     quote: "Getting into UG Medical School is cutthroat. The team at Elite Edu Consult helped me strategize my subject choices, perfect my interview confidence, and navigate the application process seamlessly.",
     rating: 5,
@@ -171,11 +182,11 @@ export const testimonials = [
     id: "3",
     name: "Priscilla Danso",
     institution: "Columbia University, USA",
-    program: "BA Economics & International Relations",
-    award: "SAT Score 1490 & Full Financial Aid",
+    program: "BA Economics and International Relations",
+    award: "SAT Score 1490 and Full Financial Aid",
     quote: "The SAT classes at Elite Edu Consult are easily the best in Accra. My score jumped from 1180 to 1490 in just 10 weeks! That opened the door to my full-ride scholarship at Columbia.",
     rating: 5,
-    tag: "Test Prep & SAT",
+    tag: "Test Prep and SAT",
   },
   {
     id: "4",
@@ -192,7 +203,7 @@ export const testimonials = [
     name: "Emmanuel Boakye",
     institution: "KNUST, Kumasi",
     program: "BSc Computer Engineering",
-    award: "Hall & Hostel Placement Secured",
+    award: "Hall and Hostel Placement Secured",
     quote: "They didn't just help me gain admission to KNUST; they also guided me to secure great hostel accommodation right on campus, which saved my parents immense stress.",
     rating: 5,
     tag: "Ghana Universities",
@@ -228,7 +239,7 @@ export const faqs = [
   },
   {
     q: "Where is Elite Edu Consult located?",
-    a: "Our consultation offices are located at Legon Campus, University of Ghana, Accra. We are open Monday through Saturday from 8:00 AM to 6:00 PM. We also offer virtual consultations for students and parents residing outside Accra.",
+    a: "Elite Edu Consult operates remotely as a virtual office (the team communicates and coordinates virtually until a physical office is established). We provide comprehensive advisory, admissions coaching, and test preparation virtually to students across Ghana and internationally via Google Meet, Zoom, phone, and WhatsApp.",
   },
   {
     q: "How do I book an initial consultation?",

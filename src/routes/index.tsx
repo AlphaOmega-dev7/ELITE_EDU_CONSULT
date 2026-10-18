@@ -32,11 +32,11 @@ const postsQuery = queryOptions({
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Elite Edu Consult — Premier Admissions & Educational Consultancy" },
+      { title: "Elite Edu Consult — Premier Admissions and Educational Consultancy" },
       {
         name: "description",
         content:
-          "Accredited educational consultancy based at Legon Campus, University of Ghana. Expert university admissions in Ghana and abroad, scholarships, SAT and NSMQ test prep, and visa advisory.",
+          "Educational consultancy based at Legon Campus, University of Ghana. Expert university admissions in Ghana and abroad, scholarships, SAT and NSMQ test prep, and visa advisory.",
       },
       {
         property: "og:title",
@@ -57,7 +57,7 @@ const pillars = [
   {
     icon: Globe2,
     tag: "Global Opportunities",
-    title: "Study Abroad & Scholarships",
+    title: "Study Abroad and Scholarships",
     text: "Direct admissions to accredited universities in the US, UK, Canada, and Europe. Comprehensive scholarship matching and visa filing support.",
     link: "/services",
   },
@@ -71,15 +71,15 @@ const pillars = [
   {
     icon: BookOpenCheck,
     tag: "High-Score Mastery",
-    title: "SAT, NSMQ & WASSCE Prep",
-    text: "Digital SAT masterclasses (1400+ target), rigorous NSMQ science & math training, and WASSCE/Nov-Dec grade booster classes.",
+    title: "SAT, NSMQ and WASSCE Prep",
+    text: "Digital SAT masterclasses (1510+ target), rigorous NSMQ science and math training, and WASSCE/Nov-Dec grade booster classes.",
     link: "/services",
   },
   {
     icon: Award,
     tag: "Financial Support",
     title: "Scholarship Advisory",
-    text: "Over $2.8M in financial awards secured. We help you write winning essays, craft persuasive statements, and pass funding interviews.",
+    text: "Over 2.8M in financial awards secured. We help you write winning essays, craft persuasive statements, and pass funding interviews.",
     link: "/services",
   },
 ];
@@ -93,19 +93,19 @@ const steps = [
   },
   {
     num: "02",
-    title: "Institution & Scholarship Matching",
+    title: "Institution and Scholarship Matching",
     text: "Target matched high-ranking universities and scholarship funds with optimal acceptance probabilities.",
     icon: School,
   },
   {
     num: "03",
-    title: "Application Dossier & Test Coaching",
+    title: "Application Dossier and Test Coaching",
     text: "Polishing personal statements, recommendation letters, CVs, and intensive coaching for SAT or entrance exams.",
     icon: FileCheck2,
   },
   {
     num: "04",
-    title: "Visa Preparation & Departure Briefing",
+    title: "Visa Preparation and Departure Briefing",
     text: "Rigorous 1-on-1 embassy mock interviews, accommodation booking, and comprehensive pre-departure briefing.",
     icon: Plane,
   },
@@ -185,7 +185,7 @@ function Index() {
               </span>
               <span className="flex items-center gap-2">
                 <Award className="h-4 w-4 text-gold" />
-                <span>$2.8M+ Scholarships Won</span>
+                <span>2.8M+ Scholarships Won</span>
               </span>
             </div>
           </div>
@@ -252,7 +252,7 @@ function Index() {
         </div>
       </section>
 
-      {/* WHY CHOOSE US & ABOUT SPLIT */}
+      {/* WHY CHOOSE US and ABOUT SPLIT */}
       <section className="bg-secondary/60 py-24">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
@@ -272,24 +272,44 @@ function Index() {
                     <GraduationCap className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="font-bold text-white text-sm">Legon Campus HQ</p>
-                    <p className="text-xs text-gold">In-Person & Virtual Advisory</p>
+                    <p className="font-bold text-white text-sm">Remote and Virtual Office</p>
+                    <p className="text-xs text-gold">Seamless Global Advisory</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Right: Why Choose Us */}
+            {/* Right: Why Choose Us / Vision */}
             <div>
-              <span className="rounded-full bg-gold/15 px-4 py-1 text-xs font-bold uppercase tracking-widest text-amber-800">
-                The Elite Advantage
-              </span>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="rounded-full bg-gold/15 px-4 py-1 text-xs font-bold uppercase tracking-widest text-amber-800">
+                  Organization's Vision
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-3 py-0.5 text-xs font-semibold text-emerald-700 border border-emerald-500/20">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                  Remote and Virtual Office
+                </span>
+              </div>
               <h2 className="mt-3 font-display text-3xl font-extrabold text-primary sm:text-4xl">
-                Every Student Deserves World-Class Guidance
+                Connecting Students with Global Opportunities
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                We believe that every student possesses unique potential. We strip away the stress, guesswork, and confusion from the admissions process to help you earn your place at the world's best institutions.
-              </p>
+              <div className="mt-4 space-y-3 text-base leading-relaxed text-muted-foreground">
+                <p>
+                  Elite Edu Consult exists to connect students and young professionals with suitable educational and international opportunities through responsible guidance, application support, academic preparation, and strategic partnerships.
+                </p>
+                <p>
+                  Elite helps students identify opportunities that genuinely fit their academic background, financial situation, career goals, and long-term plans.
+                </p>
+              </div>
+
+              <div className="mt-6 rounded-xl border border-gold/40 bg-secondary/80 p-4">
+                <p className="text-xs font-semibold text-primary uppercase tracking-wider">
+                  Mode of Operation: Remote
+                </p>
+                <p className="mt-1 text-xs leading-relaxed text-foreground/80">
+                  The Elite Edu Consult team communicates and coordinates as a virtual office, until a physical office is established.
+                </p>
+              </div>
 
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {whyUs.map((w) => (
@@ -457,9 +477,8 @@ function Index() {
                 >
                   <span>{f.q}</span>
                   <ChevronRight
-                    className={`h-5 w-5 shrink-0 text-gold transition-transform duration-200 ${
-                      isOpen ? "rotate-90" : ""
-                    }`}
+                    className={`h-5 w-5 shrink-0 text-gold transition-transform duration-200 ${isOpen ? "rotate-90" : ""
+                      }`}
                   />
                 </button>
                 {isOpen && (
@@ -494,7 +513,7 @@ function Index() {
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <div>
               <span className="rounded-full bg-gold/15 px-4 py-1 text-xs font-bold uppercase tracking-widest text-amber-800">
-                Insights & Updates
+                Insights and Updates
               </span>
               <h2 className="mt-3 font-display text-3xl font-extrabold text-primary sm:text-4xl">
                 Latest from our Educational Blog

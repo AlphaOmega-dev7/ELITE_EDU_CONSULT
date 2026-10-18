@@ -95,49 +95,45 @@ function ServicesPage() {
           <button
             type="button"
             onClick={() => setActiveTab("all")}
-            className={`rounded-full px-6 py-2.5 text-xs font-bold transition-all ${
-              activeTab === "all"
+            className={`rounded-full px-6 py-2.5 text-xs font-bold transition-all ${activeTab === "all"
                 ? "bg-primary text-primary-foreground shadow-md scale-105"
                 : "bg-secondary text-foreground hover:bg-secondary/80"
-            }`}
+              }`}
           >
             All Services ({international.length + local.length + testPrep.length})
           </button>
           <button
             type="button"
             onClick={() => setActiveTab("international")}
-            className={`flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-bold transition-all ${
-              activeTab === "international"
+            className={`flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-bold transition-all ${activeTab === "international"
                 ? "bg-primary text-primary-foreground shadow-md scale-105"
                 : "bg-secondary text-foreground hover:bg-secondary/80"
-            }`}
+              }`}
           >
             <Globe2 className="h-3.5 w-3.5" />
-            <span>Study Abroad & Scholarships ({international.length})</span>
+            <span>Study Abroad and Scholarships ({international.length})</span>
           </button>
           <button
             type="button"
             onClick={() => setActiveTab("local")}
-            className={`flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-bold transition-all ${
-              activeTab === "local"
+            className={`flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-bold transition-all ${activeTab === "local"
                 ? "bg-primary text-primary-foreground shadow-md scale-105"
                 : "bg-secondary text-foreground hover:bg-secondary/80"
-            }`}
+              }`}
           >
             <School className="h-3.5 w-3.5" />
-            <span>Ghana Universities & Colleges ({local.length})</span>
+            <span>Ghana Universities and Colleges ({local.length})</span>
           </button>
           <button
             type="button"
             onClick={() => setActiveTab("testprep")}
-            className={`flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-bold transition-all ${
-              activeTab === "testprep"
+            className={`flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-bold transition-all ${activeTab === "testprep"
                 ? "bg-primary text-primary-foreground shadow-md scale-105"
                 : "bg-secondary text-foreground hover:bg-secondary/80"
-            }`}
+              }`}
           >
             <BookOpenCheck className="h-3.5 w-3.5" />
-            <span>Test Preparation & Classes ({testPrep.length})</span>
+            <span>Test Preparation and Classes ({testPrep.length})</span>
           </button>
         </div>
 
@@ -150,7 +146,7 @@ function ServicesPage() {
                   Global Admissions
                 </span>
                 <h2 className="mt-1 font-display text-2xl font-bold text-primary sm:text-3xl">
-                  International Education & Scholarships
+                  International Education and Scholarships
                 </h2>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Applications to leading universities across the United States, Canada, the United Kingdom, Europe, and Australia.
@@ -190,7 +186,7 @@ function ServicesPage() {
                   Test Mastery
                 </span>
                 <h2 className="mt-1 font-display text-2xl font-bold text-primary sm:text-3xl">
-                  Standardized Test Preparation & Clinics
+                  Standardized Test Preparation and Clinics
                 </h2>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Proven test-taking strategies, mock tests, and subject drills designed for competitive academic success.
