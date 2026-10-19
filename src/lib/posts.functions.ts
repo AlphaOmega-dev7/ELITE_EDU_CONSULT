@@ -2,25 +2,38 @@ import { createServerFn } from "@tanstack/react-start";
 import { createClient } from "@supabase/supabase-js";
 import type { Database } from "@/integrations/supabase/types";
 
+function isNewKey(key: string) {
+  return key.startsWith("sb_publishable_") || key.startsWith("sb_secret_");
+}
+
 function publicClient() {
   const url = process.env["SUPABASE_URL"];
   const key = process.env["SUPABASE_PUBLISHABLE_KEY"];
   if (!url || !key) return null;
+
   return createClient<Database>(url, key, {
     auth: { storage: undefined, persistSession: false, autoRefreshToken: false },
     global: {
       fetch: (input, init) => {
-        const headers = new Headers(init?.headers);
-        if (key.startsWith("sb_")) {
-          if (headers.get("Authorization") === `Bearer ${key}`) headers.delete("Authorization");
-          headers.set("apikey", key);
+        const headers = new Headers(
+          typeof Request !== "undefined" && input instanceof Request
+            ? input.headers
+            : undefined,
+        );
+        if (init?.headers) {
+          new Headers(init.headers).forEach((v, k) => headers.set(k, v));
         }
+        // New-format publishable keys are opaque strings, not JWTs.
+        // Strip the auto-added Bearer so Supabase treats the request as anon.
+        if (isNewKey(key) && headers.get("Authorization") === `Bearer ${key}`) {
+          headers.delete("Authorization");
+        }
+        headers.set("apikey", key);
         return fetch(input, { ...init, headers });
       },
     },
   });
 }
-
 
 export type PublicPost = {
   id: string;
@@ -42,7 +55,7 @@ export const listPosts = createServerFn({ method: "GET" }).handler(async (): Pro
     .eq("published", true)
     .order("created_at", { ascending: false });
   if (error) {
-    console.error(error);
+    console.error("[listPosts]", error);
     return [];
   }
   return data ?? [];
@@ -59,6 +72,6 @@ export const getPost = createServerFn({ method: "GET" })
       .eq("published", true)
       .eq("slug", data.slug)
       .maybeSingle();
-    if (error) console.error(error);
+    if (error) console.error("[getPost]", error);
     return post ?? null;
   });
