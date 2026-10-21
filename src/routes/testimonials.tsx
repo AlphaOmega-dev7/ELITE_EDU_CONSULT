@@ -1,18 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Quote,
   Star,
   ShieldCheck,
   Award,
-  Sparkles,
   ArrowRight,
   MessageCircle,
   GraduationCap,
   Send,
 } from "lucide-react";
 import { PageHero } from "@/components/site-chrome";
-import { testimonials, contact } from "@/lib/site";
+import { testimonials as staticTestimonials, contact } from "@/lib/site";
+import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/testimonials")({
@@ -35,6 +35,17 @@ export const Route = createFileRoute("/testimonials")({
   component: TestimonialsPage,
 });
 
+type LiveTestimonial = {
+  id: string;
+  name: string;
+  institution: string;
+  program: string;
+  award: string | null;
+  quote: string;
+  rating: number;
+  tag: string;
+};
+
 const categories = [
   "All Stories",
   "Study Abroad",
@@ -53,6 +64,22 @@ function TestimonialsPage() {
     program: "",
     message: "",
   });
+  const [testimonials, setTestimonials] = useState<LiveTestimonial[]>(staticTestimonials);
+
+  useEffect(() => {
+    supabase
+      .from("testimonials")
+      .select("id, name, institution, program, award, quote, rating, tag")
+      .eq("published", true)
+      .order("sort_order", { ascending: true })
+      .order("created_at", { ascending: false })
+      .then(({ data, error }) => {
+        if (!error && data && data.length > 0) {
+          setTestimonials(data as LiveTestimonial[]);
+        }
+        // If error (e.g. table not migrated yet) or empty, keep the static fallback
+      });
+  }, []);
 
   const filtered =
     activeCategory === "All Stories"

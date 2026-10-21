@@ -5,7 +5,6 @@ import {
   Users,
   Target,
   GraduationCap,
-  Sparkles,
   ArrowRight,
   CheckCircle2,
   MapPin,
@@ -130,7 +129,7 @@ function AboutPage() {
       <section className="bg-gradient-to-b from-secondary/50 via-background to-secondary/30 py-24">
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center max-w-3xl mx-auto">
-            <span className="rounded-full bg-gold/15 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-amber-800">
+            <span className="rounded-full bg-gold/15 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-amber-800 dark:text-amber-300">
               Leadership and Consultants
             </span>
             <h2 className="mt-3 font-display text-3xl font-extrabold text-primary sm:text-4xl md:text-5xl">
@@ -165,11 +164,11 @@ function AboutPage() {
 
                   {/* Name and Function */}
                   <div className="mt-6">
-                    <h3 className="font-display text-xl sm:text-2xl font-extrabold text-navy tracking-tight leading-snug group-hover:text-amber-800 transition-colors">
+                    <h3 className="font-display text-xl sm:text-2xl font-extrabold text-foreground dark:text-white tracking-tight leading-snug group-hover:text-gold transition-colors">
                       {member.name}
                     </h3>
                     <div className="mt-2.5 inline-block">
-                      <span className="rounded-full bg-gold/15 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-amber-800 border border-gold/30">
+                      <span className="rounded-full bg-gold/15 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-amber-800 dark:text-amber-300 border border-gold/30">
                         {member.role}
                       </span>
                     </div>
@@ -199,7 +198,7 @@ function AboutPage() {
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <div className="flex flex-wrap items-center gap-2">
-              <span className="rounded-full bg-gold/15 px-4 py-1 text-xs font-bold uppercase tracking-widest text-amber-800">
+              <span className="rounded-full bg-gold/15 px-4 py-1 text-xs font-bold uppercase tracking-widest text-amber-800 dark:text-amber-300">
                 Our Vision and Mission
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-700 border border-emerald-500/20">
@@ -214,7 +213,7 @@ function AboutPage() {
 
             <div className="mt-6 space-y-4">
               <div className="flex items-start gap-3.5 rounded-2xl border border-border/80 bg-card p-5 shadow-sm transition-all hover:border-gold/50">
-                <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold/20 text-amber-800 font-bold text-xs">
+                <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold/20 text-amber-800 dark:text-amber-300 font-bold text-xs">
                   ●
                 </div>
                 <p className="text-base leading-relaxed text-foreground/90">
@@ -223,7 +222,7 @@ function AboutPage() {
               </div>
 
               <div className="flex items-start gap-3.5 rounded-2xl border border-border/80 bg-card p-5 shadow-sm transition-all hover:border-gold/50">
-                <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold/20 text-amber-800 font-bold text-xs">
+                <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold/20 text-amber-800 dark:text-amber-300 font-bold text-xs">
                   ●
                 </div>
                 <p className="text-base leading-relaxed text-foreground/90">
@@ -235,7 +234,7 @@ function AboutPage() {
             {/* Mode of Operation Notice */}
             <div className="mt-6 rounded-2xl border-2 border-gold/40 bg-gradient-to-br from-secondary/90 via-secondary/60 to-gold/10 p-6 shadow-sm">
               <div className="flex items-center gap-2.5">
-                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gold/20 text-amber-800">
+                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gold/20 text-amber-800 dark:text-amber-300">
                   <Globe className="h-5 w-5" />
                 </div>
                 <div>
@@ -280,7 +279,7 @@ function AboutPage() {
       <section className="bg-secondary/60 py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center max-w-3xl mx-auto">
-            <span className="rounded-full bg-gold/15 px-4 py-1 text-xs font-bold uppercase tracking-widest text-amber-800">
+            <span className="rounded-full bg-gold/15 px-4 py-1 text-xs font-bold uppercase tracking-widest text-amber-800 dark:text-amber-300">
               What Guides Us
             </span>
             <h2 className="mt-3 font-display text-3xl font-extrabold text-primary sm:text-4xl">
@@ -315,7 +314,7 @@ function AboutPage() {
       {/* MILESTONE TIMELINE */}
       <section className="mx-auto max-w-5xl px-4 py-24">
         <div className="text-center">
-          <span className="rounded-full bg-gold/15 px-4 py-1 text-xs font-bold uppercase tracking-widest text-amber-800">
+          <span className="rounded-full bg-gold/15 px-4 py-1 text-xs font-bold uppercase tracking-widest text-amber-800 dark:text-amber-300">
             Our Journey
           </span>
           <h2 className="mt-3 font-display text-3xl font-extrabold text-primary sm:text-4xl">
@@ -329,7 +328,7 @@ function AboutPage() {
               <div className="absolute -left-[31px] sm:-left-[39px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-gold text-navy shadow-sm">
                 <span className="h-2 w-2 rounded-full bg-navy" />
               </div>
-              <span className="font-display text-sm font-extrabold text-amber-700">
+              <span className="font-display text-sm font-extrabold text-amber-700 dark:text-amber-400">
                 {m.year}
               </span>
               <h3 className="mt-0.5 font-display text-xl font-bold text-primary">

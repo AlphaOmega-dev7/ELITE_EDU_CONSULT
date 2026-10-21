@@ -11,7 +11,6 @@ import {
   ShieldCheck,
   Star,
   MessageCircle,
-  Sparkles,
   ChevronRight,
   GraduationCap,
   Users,
@@ -132,8 +131,7 @@ function Index() {
 
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:py-32 lg:py-36">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 rounded-full gold-gradient-badge px-4 py-1.5 text-xs font-bold text-gold shadow-sm">
-              <Sparkles className="h-4 w-4" />
+            <div className="inline-flex items-center rounded-full gold-gradient-badge px-4 py-1.5 text-xs font-bold text-gold shadow-sm">
               <span>Accredited Educational Advisory · Legon Campus</span>
             </div>
 

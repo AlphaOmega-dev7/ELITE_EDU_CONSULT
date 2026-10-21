@@ -9,7 +9,6 @@ import {
   Send,
   Calendar,
   CheckCircle2,
-  Sparkles,
 } from "lucide-react";
 import { PageHero } from "@/components/site-chrome";
 import { contact } from "@/lib/site";
@@ -357,8 +356,7 @@ function ContactPage() {
 
             {/* Virtual Consultation Notice */}
             <div className="rounded-2xl border border-gold/20 bg-amber-500/5 p-6">
-              <div className="flex items-center gap-2 text-amber-800 font-bold text-sm">
-                <Sparkles className="h-4 w-4 text-gold" />
+              <div className="flex items-center text-amber-800 font-bold text-sm">
                 <span>Living Outside Accra?</span>
               </div>
               <p className="mt-1 text-xs leading-relaxed text-muted-foreground">

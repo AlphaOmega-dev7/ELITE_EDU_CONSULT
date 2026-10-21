@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, Calendar, User, MessageCircle, Share2, Sparkles, GraduationCap } from "lucide-react";
+import { ArrowLeft, Calendar, User, MessageCircle, Share2, GraduationCap } from "lucide-react";
 import { getPost } from "@/lib/posts.functions";
 import { contact } from "@/lib/site";
 import { toast } from "sonner";

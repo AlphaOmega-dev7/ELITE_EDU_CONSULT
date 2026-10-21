@@ -6,7 +6,6 @@ import {
   BookOpenCheck,
   CheckCircle2,
   ArrowRight,
-  Sparkles,
   Award,
   ShieldCheck,
   Calendar,

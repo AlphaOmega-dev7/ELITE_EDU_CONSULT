@@ -13,8 +13,11 @@ import {
   ExternalLink,
   ShieldCheck,
   Award,
+  Moon,
+  Sun,
 } from "lucide-react";
 import { contact, nav } from "@/lib/site";
+import { useTheme } from "@/hooks/use-theme";
 
 export function TopBar() {
   return (
@@ -76,6 +79,7 @@ export function Logo() {
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <div className="sticky top-0 z-50">
@@ -102,6 +106,13 @@ export function SiteHeader() {
           </nav>
 
           <div className="hidden items-center gap-4 lg:flex">
+            <button
+              onClick={toggleTheme}
+              aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+              className="theme-toggle rounded-lg p-2 text-white/70 hover:bg-white/10 hover:text-gold"
+            >
+              {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </button>
             <Link
               to="/contact"
               className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-gold via-amber-400 to-amber-500 px-5 py-2.5 text-sm font-bold text-navy shadow-md transition-all hover:scale-[1.02] hover:shadow-gold/25"
@@ -141,6 +152,13 @@ export function SiteHeader() {
             </nav>
 
             <div className="mt-6 border-t border-white/10 pt-5 space-y-3">
+              <button
+                onClick={toggleTheme}
+                className="flex w-full items-center justify-center gap-2 rounded-lg border border-white/20 py-2.5 text-center text-sm font-semibold text-white/80 hover:bg-white/5"
+              >
+                {theme === "dark" ? <Sun className="h-4 w-4 text-gold" /> : <Moon className="h-4 w-4 text-gold" />}
+                <span>{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
+              </button>
               <Link
                 to="/contact"
                 onClick={() => setOpen(false)}
