@@ -434,8 +434,9 @@ function Index() {
                     </div>
                   </div>
                   {t.award && (
-                    <div className="mt-3 inline-block rounded-md bg-gold/15 px-2.5 py-1 text-[11px] font-semibold text-gold">
-                      🏆 {t.award}
+                    <div className="mt-3 inline-flex items-center gap-1.5 rounded-md bg-gold/15 px-2.5 py-1 text-[11px] font-semibold text-gold">
+                      <Award className="h-3.5 w-3.5 shrink-0" />
+                      <span>{t.award}</span>
                     </div>
                   )}
                 </div>
